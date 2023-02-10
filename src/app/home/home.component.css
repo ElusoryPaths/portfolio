@@ -1,0 +1,21 @@
+.logo {
+    font-size: 30vh;
+    font-family: 'ape';
+    text-align: right;
+}
+
+.welcome {
+    font-size: 10vh;
+    font-family: 'pasti';
+    text-align: center;
+}
+
+.home {
+    background-image: url('../../assets/images/background/pexels-tirachard-kumtanom-733857.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+    
+    height: calc(100vh - 70px - 100px);
+}
+

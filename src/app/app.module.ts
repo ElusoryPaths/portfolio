@@ -8,6 +8,10 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './home/home.component';
+import { BlogComponent } from './blog/blog.component';
+import { ContactComponent } from './contact/contact.component';
+import { RecentCardComponent } from './recent-card/recent-card.component';
+import { BlogPageComponent } from './blog-page/blog-page.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +19,11 @@ import { HomeComponent } from './home/home.component';
     PageNotFoundComponent,
     HeaderComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    BlogComponent,
+    ContactComponent,
+    RecentCardComponent,
+    BlogPageComponent,
   ],
   imports: [
     BrowserModule,

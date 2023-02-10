@@ -1,5 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
 @font-face {
     font-family: 'nevis';
-    src: url('./assets/fonts/NevisBold.ttf');
+    src: url('./assets/fonts/nevis-font/NevisBold.ttf');
+}
+
+@font-face {
+    font-family: 'ape';
+    src: url('./assets/fonts/a-ape-mount-font/ApeMount-WyPM9.ttf');
+}
+
+@font-face {
+    font-family: 'dense';
+    src: url('./assets/fonts/dense-letters-font/DenseLetters-nRgDO.otf');
+}
+
+@font-face {
+    font-family: 'pasti';
+    src: url('./assets/fonts/pasti-font/PastiRegular-mLXnm.otf');
+}
+
+
+.icon {
+    width: 50px;
+    height: 50px;
 }
