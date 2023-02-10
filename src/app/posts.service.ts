@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import Post from './Post';
-import lab1 from '../assets/posts/lab1.json'
-import lab2 from '../assets/posts/lab2.json'
+//import lab1 from '../assets/posts/lab1.json'
+//import lab2 from '../assets/posts/lab2.json'
 @Injectable({
   providedIn: 'root'
 })
@@ -9,8 +9,8 @@ export class PostsService {
   posts: Array<Post> = [];
 
   constructor() { 
-    this.posts.push(lab1)
-    this.posts.push(lab2)
+    //this.posts.push(lab1)
+    //this.posts.push(lab2)
   }
 
   getRecentPosts(): Array<any> {
