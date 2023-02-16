@@ -1,0 +1,41 @@
+.post-details {
+    padding-top: 30px;
+}
+
+.footer-item {
+    padding: 5px;
+    margin: 10px;
+    border-right: solid 1px gray;
+}
+
+.post-footer {
+    margin-top: 20px;
+    font-size: 0.8em;
+}
+
+.avatar {
+    max-width: 40px;
+    min-width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+
+.date,
+.title {
+    font-weight: 400;
+    color: #999;
+
+
+}
+
+.post-footer .title::after,
+.post-footer .date::after {
+    content: '|';
+    display: inline-block;
+    margin: 0 7px;
+    font-size: 0.9em;
+    color: #ccc;
+}

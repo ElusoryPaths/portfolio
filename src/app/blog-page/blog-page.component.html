@@ -1,5 +1,20 @@
 <section class="main-blog">
-    <div>
+    <div class="container">
+        <div class="row">
+          <!-- Latest Posts -->
+          <main class="posts-listing col-lg-8">
+            <div class="container">
+              <div class="row">
+                <app-post-card class="post col-xl-6" *ngFor="let post of posts" [post]="post">card</app-post-card>
+                
+              </div>
+            </div>
+          </main>
+          <aside class="col-lg-4">
+            
 
-    </div>
+          </aside>
+        </div>
+      </div>
 </section>
+
