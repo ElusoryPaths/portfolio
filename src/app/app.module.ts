@@ -14,6 +14,7 @@ import { RecentCardComponent } from './recent-card/recent-card.component';
 import { BlogPageComponent } from './blog-page/blog-page.component';
 import { PostCardComponent } from './post-card/post-card.component';
 import { AboutComponent } from './about/about.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { AboutComponent } from './about/about.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

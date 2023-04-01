@@ -2,9 +2,11 @@
 <section class="blogPage">
     <div class="container">
         <div class="row" *ngIf="blog">
-            <h1>{{blog.title}}</h1>
+            <h1 class="title">{{blog.title}}</h1>
             <div class="col-md-8">
-                <p *ngFor="let line of blog.body">{{line}}</p>
+                <p><i>Uploaded on {{blog.date}} by {{blog.author}}</i></p>
+            </div>
+            <div class="col-md-8" [innerHTML]="body">
             </div>
             <aside class="col-md-4"></aside>
         </div>

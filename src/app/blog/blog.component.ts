@@ -11,13 +11,12 @@ import { PostsService } from '../posts.service';
 })
 export class BlogComponent implements OnInit, OnDestroy {
 
-  blog: Post | undefined 
+  blog: Post | undefined
   querySub: Subscription[] = [];
   id: string | null = ""
+  body: string | undefined = "";
 
-  constructor(private postServ: PostsService, private route: ActivatedRoute) {
-
-  }
+  constructor(private postServ: PostsService, private route: ActivatedRoute) { }
 
   ngOnDestroy(): void {
     this.querySub.forEach((subscription) => subscription.unsubscribe());
@@ -29,24 +28,30 @@ export class BlogComponent implements OnInit, OnDestroy {
         this.id = params.get('id')
       })
     )
-      if (this.id) {
-        this.blog = this.postServ.getPost(this.id);
-        if (this.blog) this.blog.body = this.getBody();
-      }
-  }
+    if (this.id) {
+      this.querySub.push(
+        this.postServ.getLab(this.id).subscribe({
+          next: (post) => {
+            this.blog = post;
+          },
+          error: (err) => {
+            console.log('could not find file, manually pulling ...')
+            this.blog = this.postServ.getPost(this.id)
+          }
+        })
+      );
 
-  getBody(): Array<string> {
-    if (!this.blog) return [];
-    let lines = []
-    let text = ""
-    for (let line of this.blog?.body) {
-      text += line;
-      if (line == "") {
-        lines.push(text);
-        text = ""
-      }
+      this.querySub.push(
+        this.postServ.getBody(this.id).subscribe({
+          next: (post) => {
+            this.body = post
+          },
+          error: (err) => {
+            console.log('could not find file, manually pulling ...')
+            this.body = this.blog?.body
+          }
+        })
+      );
     }
-    return lines
   }
-  
 }
